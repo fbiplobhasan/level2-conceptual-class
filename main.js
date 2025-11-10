@@ -5,9 +5,12 @@ function iSort(arr) {
         let j = i - 1;
         while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j]
+            j--;
         }
+        arr[j + 1] = key;
     }
+    return arr
 }
 
 const nums = [2, 5, 8, 1, 4]
-iSort(nums)
+console.log(iSort(nums)); 
